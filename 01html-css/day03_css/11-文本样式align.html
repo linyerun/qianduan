@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本样式</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #one {
+            text-align: left;
+        }
+        #two {
+            text-align: center;
+        }
+        #three {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        text-align : center 能让哪些元素水平居中？
+            1. 文本
+            2. span标签、a标签
+            3. input标签、img标签
+        注意点：
+        1. 如果需要让以上元素水平居中， 
+           text-align : center 需要给以上元素的 父元素 设置
+        
+        本文父元素：
+            h1里面的文本的父元素是h1
+            img里面的父元素是div
+     -->
+    <h1>新闻标题</h1>
+    <div id="one">
+        <img src="01images/01.jpg">
+    </div>
+    <div id="two">
+        <img src="01images/01.jpg">
+    </div>
+    <div id="three">
+        <img src="01images/01.jpg">
+    </div>
+</body>
+</html>

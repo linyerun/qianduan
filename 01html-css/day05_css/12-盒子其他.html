@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内减模式</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: 10px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        不会撑大盒子的特殊情况(块级元素)
+            1.如果子盒子没有设置宽度，此时宽度默认是父盒子的宽度
+            2.此时给子盒子设置左右的padding或者左右的border，此时不会撑大子盒子
+     -->
+    
+    <!-- 
+        自动内减：
+            操作：给盒子设置属性 box-sizing : border-box ; 即可
+     -->
+    <div>
+
+    </div>
+</body>
+</html>

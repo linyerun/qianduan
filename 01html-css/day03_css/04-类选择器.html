@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类选择器</title>
+    <style>
+        .one {
+            color: red;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        结构：.类名 { css属性名：属性值； }
+        作用：通过类名，找到页面中所有带有这个类名的标签，设置样式
+
+        1. 所有标签上都有class属性，class属性的属性值称为类名（类似于名字）
+        2. 类名可以由数字、字母、下划线、中划线组成，但不能以数字或者中划线开头
+        3. 一个标签可以同时有【多个类名】，类名之间以空格隔开
+        4. 类名可以重复，一个类选择器【可以同时选中多个标签】
+     -->
+     <div class="one">类选择器</div>
+</body>
+</html>

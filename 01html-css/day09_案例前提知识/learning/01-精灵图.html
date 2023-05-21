@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图</title>
+    <!-- 
+        步骤:
+            1. 使用小标签(span)
+            2. 设置背景图
+            3. 挪动背景图 background-position: 负数向左挪,负数向上挪;
+     -->
+    <style>
+        span {
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            background-image: url('./images/taobao.png');
+            background-position: -3px 0;
+        }
+        b {
+            display: block;
+            width: 20px;
+            height: 25px;
+            background-image: url('./images/taobao.png');
+            background-position: -2px -90px;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <b></b>
+</body>
+</html>

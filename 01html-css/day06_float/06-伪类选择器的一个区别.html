@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区别</title>
+    <style>
+        /* 好家伙,谷歌浏览器上它直接没显示效果(错误原因: d1写成了dl) */
+        /* .dl li:nth-child(2n) {
+            color: red;
+        } */
+        .d1 li:nth-child(4){
+            color: red;
+        }
+        .d2 li:nth-of-type(4) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        这两个的区别就是：
+            加入一连串的li，使用这两个都没区别，
+            但是如果在li附近插入h1,这个时候":nth-child"就出问题了,":nth-of-type"没事
+            看下面例子
+     -->
+    <div class="d1">
+        <ul>
+            <li>这是第1个li</li>
+            <li>这是第2个li</li>
+
+            <h1>aaa</h1>
+
+            <li>这是第3个li</li>
+            <li>这是第4个li</li>
+
+            <h1>bbb</h1>
+
+            <li>这是第5个li</li>
+            <li>这是第6个li</li>
+            <li>这是第7个li</li>
+            <li>这是第8个li</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="d2">
+        <ul>
+            <li>这是第1个li</li>
+            <li>这是第2个li</li>
+            
+            <h1>aaa</h1>
+            
+            <li>这是第3个li</li>
+            <li>这是第4个li</li>
+            
+            <h1>bbb</h1>
+            
+            <li>这是第5个li</li>
+            <li>这是第6个li</li>
+            <li>这是第7个li</li>
+            <li>这是第8个li</li>
+        </ul>
+    </div>
+</body>
+</html>

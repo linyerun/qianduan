@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+</head>
+<body>
+    <script>
+        /*
+            1. 隐式转换:
+                规则:
+                    1. + 号两边只要有一个是字符串，都会把另外一个转成字符串
+                    2. 除了+以外的算术运算符 比如 - * / 等都会把数据转成数字类型
+                缺点:
+                    转换类型不明确，靠经验才能总结
+                小技巧:
+                    +号作为正号解析可以转换成Number
+            2. 显式转换
+                字符串转数字:
+                    Number(数据)
+                        转成数字类型
+                        如果字符串内容里有非数字，转换失败时结果为 NaN（Not a Number）即不是一个数字
+                        NaN也是number类型的数据，代表非数字
+                    parseInt(数据)
+                        只保留整数
+                    parseFloat(数据)
+                        可以保留小数
+                数字转字符串:
+                    String(数据)
+                    变量.toString(进制)
+        */
+
+        // 案例：输入两个数，求这两个数的和
+        document.write(`<h1>两数之和为${Number(prompt('请输入第一个数'))+parseInt(prompt('请输入第二个数'))}</h1>`)
+    </script>
+</body>
+</html>

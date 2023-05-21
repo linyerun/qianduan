@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分时问候并显示不同图片案例</title>
+    <style>
+        img {
+            width: 300px;
+        }
+        #div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <img>
+        <div class="div" style="text-align: center;"></div>
+    </div>
+    <script>
+        let d = new Date()
+        h = d.getHours()
+
+        let img = document.querySelector("img")
+        let div = document.querySelector(".div")
+
+        if(h<12) {
+            img.src = 'images/s.gif'
+            div.innerHTML = '亲，上午好，好好写代码'
+        }else if(h<18) {
+            img.src = 'images/x.gif'
+            div.innerHTML = '亲，下午好，好好写代码'
+        }else {
+             img.src = 'images/w.gif'
+            div.innerHTML = '亲，晚上好，好好写代码'
+        }
+        div.innerHTML = `<strong>${div.innerHTML}</strong>`
+    </script>
+</body>
+</html>

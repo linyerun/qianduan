@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        .son {
+            display: inline-block;/*block不行啊,不懂*/
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        没有定位,就看距离body的距离,单位是px
+     -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <!-- 
+        我们想要获取元素大小位置，用offset更合适
+            具体细节看ppt
+     -->
+    <script>
+
+        let dad = document.querySelector(".father")
+        console.log("offsetTop: "+dad.offsetTop)
+        console.log("offsetLeft: "+dad.offsetLeft)
+        // son的
+        let son = document.querySelector(".son")
+        console.log("offsetTop: " + son.offsetTop)
+        console.log("offsetLeft: " + son.offsetLeft)
+        // offsetHeight offsetWidth
+        console.log("dad: "+dad.offsetHeight+" "+dad.offsetWidth)
+        console.log("son: "+son.offsetHeight+" "+son.offsetWidth)
+        console.log(son.offsetParent);
+    </script>
+</body>
+</html>

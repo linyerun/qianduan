@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        给自定义属性这样写"data-小驼峰名字"
+     -->
+    <div data-index="1"></div>
+    <script>
+        let d = document.querySelector("div")
+        // 实现原理也很简单,就是将前缀"data-"的属性加入到对象dataset里面
+        console.log(d.dataset.index);
+        console.log(d.dataset["index"]);
+    </script>
+</body>
+</html>

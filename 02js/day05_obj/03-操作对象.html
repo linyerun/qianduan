@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作对象</title>
+</head>
+<body>
+    <!-- 
+        查询对象:
+            对象.属性 或者 对象[‘属性’]
+            对象.方法()
+        重新赋值:
+            对象.属性 = 值
+            对象.方法 = function() {}
+        对象添加新的数据:
+            对象名.新属性名 = 新值
+        删除对象中属性:
+            delete 对象名.属性名
+     -->
+    <script>
+        let p = {
+            name: "哈哈",
+            getName: function() {
+                return this.name
+            }
+        }
+        delete p.name
+        console.log(p.getName());//undefine
+    </script>
+</body>
+</html>

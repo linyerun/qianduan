@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命名规范</title>
+</head>
+<body>
+    <!-- 
+        规则(必须遵守,不然报错):
+            1. 只能用下划线、字母、数字、$组成，且数字不能开头
+            2. 不能用关键字(let、var、if、for等)
+        规范:
+            1. 起名要有意义
+            2. 小驼峰(例如: groupName)
+     -->
+    <!-- 用户输入: 姓名 年龄 性别,我展示在页面上 -->
+    <script>
+        let name = prompt("请输入你的姓名")
+        let age = prompt("请输入你的年龄")
+        let sex = prompt("请输入你的性别")
+        document.write(`<h1>你的姓名: ${name}</h1>`)
+        document.write(`<h1>你的姓名: ${age}</h1>`)
+        document.write(`<h1>你的姓名: ${sex}</h1>`)
+    </script>
+</body>
+</html>

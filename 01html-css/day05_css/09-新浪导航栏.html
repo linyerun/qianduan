@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+            height: 40px;/* 这个不要也行，会被下面的高度撑大 */
+        }
+        a {
+            text-decoration: none;
+            background-color: #ffffff;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #4c4c4c;
+            display: inline-block;
+            font-size: 12px;
+        }
+        a:hover {
+            color: #ff8400;
+            background-color: #edeef0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        布局顺序:
+            从外往内，从上往下
+     -->
+    <div>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+    </div>
+</body>
+</html>

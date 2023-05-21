@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内元素margin/padding失效</title>
+    <style>
+        span {
+            margin: 100px;
+            padding: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        场景：给行内元素设置margin和padding时
+        结果：
+            1. 水平方向的margin和padding布局中[有效]！
+            2. 垂直方向的margin和padding布局中[无效]！
+            (水平有效，垂直无效)
+        解决:
+            可以使用line-height解决这个垂直问题
+     -->
+    <div>
+        <span>哈哈哈</span>
+    </div>
+</body>
+</html>

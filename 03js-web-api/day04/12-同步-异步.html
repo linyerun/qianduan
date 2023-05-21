@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同步任务-异步任务</title>
+</head>
+<body>
+    <!-- 
+        记住三个东西:
+            执行栈(主线程)
+            任务队列(异步)
+            异步进程
+        
+        简述过程:
+            执行栈首先被执行,遇到回调函数等异步操作,就交给"异步进程"处理.
+            异步进程会在恰当的时候把函数放入任务队列.
+            执行栈的内容执行完之后会一致监听任务队列,当任务队列有任务的时候,就拿过来执行
+     -->
+    <script>
+        console.log(1);
+        document.onclick = function() {
+            console.log('click');
+            }
+            console.log(2);
+            setTimeout(function() {
+            console.log(3)
+        }, 3000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+</head>
+<body>
+    <!-- 
+
+     -->
+    <script>
+        let obj = {
+            name: "andy",
+            age: 18,
+            sex: "男",
+            getName: function() {
+                return this.name
+            }
+        }
+        for(let k in obj) {
+            console.log(k+" : "+obj[k]); //打印属性值
+        }
+    </script>
+</body>
+</html>

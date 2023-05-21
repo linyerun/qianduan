@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体样式</title>
+    <style>
+        * {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            font-family: 微软雅黑, 黑体, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.字体大小：
+            属性名：font-size
+            取值：数字 + px(单位需要设置，否则无效)
+            谷歌浏览器默认文字大小是16px
+        2.字体粗细:
+            属性名：font-weight
+            取值：
+                normal  正常
+                bold    加粗
+                纯数字表示( 范围100~900的整百数 ):
+                    400 正常
+                    700 加粗
+            注意点:
+                不是所有字体都提供了九种粗细，因此部分取值页面中无变化
+                实际开发中以：正常、加粗两种取值使用最多。
+        3.字体样式（是否倾斜）
+            属性名：font-style
+            取值：
+                normal 正常
+                italic 倾斜
+        4.属性名：font-family
+            字体系列：sans-serif、serif、monospace等
+            渲染规则：
+                1. 从左往右按照顺序查找，如果电脑中未安装该字体，则显示下一个字体
+                2. 如果都不支持，此时会根据操作系统，显示最后字体系列的默认字体
+            注意点:
+                1. 如果字体名称中存在多个单词，推荐使用引号包裹
+                2. 最后一项字体系列不需要引号包裹
+                3. 网页开发时，尽量使用系统常见自带字体，保证不同用户浏览网页都可以正确显示
+     -->
+     <div>笑死，就你也学前端，你能学精吗？</div>
+</body>
+</html>

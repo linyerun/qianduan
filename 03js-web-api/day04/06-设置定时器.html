@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器介绍</title>
+</head>
+<body>
+    <!-- 
+        window.setTimeout(调用函数, [延迟的毫秒数]);
+            这个调用函数可以直接写函数，
+            或者写函数名或者采取字符串‘函数名()'三种形式。第三种不推荐
+     -->
+    <div style="width: 100px;height: 100px;margin: 50px auto; background-color: orange;line-height: 100px;text-align: center;">这是广告</div>
+    <script>
+        // 案例： 5秒后自动关闭的广告
+        let div = document.querySelector("div")
+        let id = setTimeout(function() {
+            div.style.display = 'none'
+        },5000)
+        alert(id)
+    </script>
+</body>
+</html>

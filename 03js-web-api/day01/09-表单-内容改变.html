@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div {
+            margin: 0 auto;
+            padding-top: 10px;
+            height: 20px;
+            width: 1000px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        表单元素的属性操作:
+            type, value, checked, selected, disabled
+     -->
+    <div>
+        <button style="vertical-align: top;height: 30px;">按钮</button>
+        <input type="text" value="默认值" style="vertical-align: top;height: 30px;">
+    </div>
+    <script>
+        let btn = document.querySelector("button")
+        let inp = document.querySelector("input")
+        btn.onclick = function() {
+            inp.value = "我被点击了"
+            btn.disabled = true
+        }
+    </script>
+</body>
+</html>

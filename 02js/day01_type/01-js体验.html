@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验JS</title></title>
+    <style>
+        .pink {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <button class="pink">按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <script>
+        let btns = document.querySelectorAll('button')
+        for(let i=0; i<btns.length; i++) {
+            //给按钮绑定一个点击事件
+            btns[i].addEventListener('click',function() {
+                //去掉类选择器名为pink的名字
+                document.querySelector('.pink').className = ''
+                //将当前类选择器名改为pink
+                this.className = 'pink'
+            })
+        }
+    </script>
+</body>
+</html>

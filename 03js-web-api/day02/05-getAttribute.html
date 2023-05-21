@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute</title>
+</head>
+<body>
+    <div id="lyr" index="自定义属性"></div>
+    <script>
+        let div = document.getElementById("lyr")
+        // 只能获取内置属性
+        console.log(`div.id = ${div.id}`)
+        // 既可以获取内置属性,也可以获取自定义属性
+        console.log(`getAttribute('id') = ${div.getAttribute('id')}`)
+        console.log(`getAttribute('index') = ${div.getAttribute('index')}`)
+    </script>
+</body>
+</html>

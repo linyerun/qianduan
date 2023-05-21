@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点介绍</title>
+</head>
+<body>
+    <!-- 
+        节点至少拥有
+            nodeType（节点类型）、
+            nodeName（节点名称）和
+            nodeValue（节点值）这三个基本属性
+     -->
+    <div class="d">
+        <span>
+            haha
+        </span>
+        <span>
+            lala
+        </span>
+    </div>
+    <script>
+        let d = document.querySelector(".d")
+        console.dir(d)
+    </script>
+</body>
+</html>

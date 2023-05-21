@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重叠加计算</title>
+    <style>
+        /* (行内, id, 类, 标签) */
+
+        /* (0, 1, 0, 1) */
+        div #one {
+            color: orange;
+        }
+
+        /* (0, 0, 2, 0) */
+        .father .son {
+            color: skyblue;
+        }
+
+        /* (0, 0, 1, 1) */
+        .father p {
+            color: purple;
+        }
+        
+        /* (0, 0, 0, 2) */
+        div p {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.复合选择器中：(行内样式个数, id选择器个数, 类选择器个数, 标签选择器个数)
+
+        2.把这个统计好之后,按照(第一级, 第二级, 第三级, 第四级)进行比较,
+        就好像字符串比较大小一样。
+
+        比较规则：
+            1. 先比较第一级数字，如果比较出来了，之后的统统不看
+            2. 如果第一级数字相同，此时再去比较第二级数字，如果比较出来了，之后的统统不看
+            注意点：!important如果不是继承，则权重最高，天下第一！
+        
+        基础选择器和复合选择器一样使用这个进行转化然后进行比较
+
+        权重计算题解题步骤：
+            1. 先判断选择器是否能直接选中标签，如果不能直接选中 → 是继承，优先级最低 → 直接pass
+            2. 通过权重计算公式，判断谁权重最高
+     -->
+    <div class="father">
+        <p class="son" id="one">我是一个标签</p>
+    </div>
+</body>
+</html>

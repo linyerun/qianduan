@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+</head>
+<body>
+    <script>
+        let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+        for(let i=arr.length-1;i>=1;i--) {
+            for(let j=0;j<i;j++) {
+                if(arr[j]>arr[j+1]) {
+                    let tmp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = tmp
+                }
+            }
+        }
+        alert(`数组:${arr}`)
+    </script>
+</body>
+</html>

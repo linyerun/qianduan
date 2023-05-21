@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合并单元格</title>
+</head>
+<body>
+    <table border="1">
+        <caption>学生成绩表</caption>
+        <!-- thead括住的会加粗 -->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AAA</td>
+                <!-- 当前100占三行 -->
+                <td rowspan="3">100</td>
+                <td>你真牛啊</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <!-- <td>90</td> -->
+                <td>你他娘的是个天才</td>
+            </tr>
+            <tr>
+                <td>CCC</td>
+                <!-- <td>80</td> -->
+                <td>你真的很优秀啊</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <!-- “你们非常优秀！”占两行 -->
+                <td colspan="2">你们非常优秀！</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

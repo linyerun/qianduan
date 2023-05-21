@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建节点</title>
+</head>
+<body>
+    <!-- 
+        创建节点:   => 配合添加节点方法使用
+            document.createElement('tagName')
+        添加节点:
+            node.appendChild(child)
+                将一个节点添加到指定父节点的子节点列表末尾
+                类型css里面的after
+            node.insertBefore(child, 指定元素)
+                法将一个节点添加到父节点的指定子节点前面
+                类似于 CSS 里面的 before伪元素。
+     -->
+    <div>啦啦啦</div>
+    <script>
+        //用完之后,记得再创建
+
+        let e1 = document.createElement("div")
+        e1.innerText = "哈哈哈"
+        document.body.appendChild(e1)
+
+
+        let e2 = document.createElement("div")
+        e2.innerText = "哈哈哈"
+        document.body.insertBefore(e2,document.body.children[0])
+    </script>
+</body>
+</html>

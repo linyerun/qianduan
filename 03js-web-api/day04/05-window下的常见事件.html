@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. DOMContentLoaded 事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等。
+            document.addEventListener('DOMContentLoaded',function(){})
+        2. 调整窗口大小事件(window.addEventListener("resize",function(){});)
+            1. 只要窗口大小发生像素变化，就会触发这个事件。
+            2. 我们经常利用这个事件完成响应式布局。 window.innerWidth 当前屏幕的宽度
+     -->
+    <script>
+        // onload事件演示
+        window.addEventListener("load",function() {
+            let b = document.querySelector("button")
+            b.addEventListener('click',function() {
+                alert("弹出广告")
+            })
+            alert(b)
+        })
+    </script>
+</head>
+<body>
+    <button>点击</button>
+</body>
+</html>

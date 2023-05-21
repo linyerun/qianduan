@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取消定时器</title>
+</head>
+<body>
+    <!-- 
+        window.clearTimeout(timeoutID)
+
+     -->
+    <div
+        style="width: 100px;height: 100px;margin: 50px auto; background-color: orange;line-height: 100px;text-align: center;">
+        这是广告</div>
+    <script>
+        // 案例： 5秒后自动关闭的广告
+        let div = document.querySelector("div")
+        let id = setTimeout(function () {
+            div.style.display = 'none'
+        }, 5000)
+        // 取消之前还没过期的定时器
+        clearTimeout(id)
+    </script>
+</body>
+</html>

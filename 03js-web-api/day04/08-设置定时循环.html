@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环</title>
+</head>
+<body>
+    <!-- 
+        window.setInterval(回调函数, [间隔的毫秒数])
+            因为定时器可能有很多，所以我们经常给定时器赋值一个标识符。
+            第一次执行也是间隔毫秒数之后执行，之后每隔毫秒数就执行一次
+     -->
+    <ul></ul>
+    <script>
+        let ul = document.querySelector("ul")
+        setInterval(function() {
+            let li = document.createElement("li")
+            li.innerHTML = "lyr"
+            ul.appendChild(li)
+        },2000)
+    </script>
+</body>
+</html>

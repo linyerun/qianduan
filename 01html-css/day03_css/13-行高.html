@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <style>
+        p {
+            line-height: 50px;
+        }
+        h1 {
+            font: italic 700 100px/2 微软雅黑;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        行高 = 上间距 + 文本高度 + 下间距
+
+        作用：控制一行的【上下行间距】
+
+        属性名：line-height
+
+        取值：
+            数字+px
+            倍数（当前标签font-size的倍数）
+
+        应用：
+            1. 让单行文本垂直居中可以设置 line-height : 文字父元素高度
+            2. 网页精准布局时，会设置 line-height : 1 可以取消上下间距
+        行高与font连写的注意点：
+            如果同时设置了行高和font连写，注意覆盖问题
+            font : style weight 【size/line-height】 family ;(注意要使用"/"隔开)
+     -->
+    <p>
+        2019年，事件视界望远镜团队让世界首次看到了黑洞的样子。不过，研究人员公布的这张发光环形物体的图像并不是传统的图片，而是经过计算获得的。利用位于美国、墨西哥、智利、西班牙和南极地区的射电望远镜所得到的数据，研究人员进行了数学转换，最终合成了这张标志性的图片。研究团队还发布了实现这一壮举所用的编程代码，并撰文记录这一发现，其他研究者也可以在此基础上进一步加以分析。
+    </p>
+    <h1>啦啦啦</h1>
+</body>
+</html>

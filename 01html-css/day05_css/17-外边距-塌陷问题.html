@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塌陷问题</title>
+    <style>
+        .dad {
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            overflow: hidden;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 100px;
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        场景：互相嵌套 的 块级元素，子元素的 margin-top 会作用在父元素上
+        结果：导致父元素一起往下移动
+        解决：
+            1.给父元素设置border-top 或者 padding-top（分隔父子元素的margin-top）
+            2.给父元素设置overflow：hidden (推荐)
+            3.转换成行内块元素
+            4.设置浮动
+     -->
+    <div class="dad">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

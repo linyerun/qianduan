@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="d">
+        <ul>
+            <li>知否知否，应是等你好久11</li>
+            <li>知否知否，应是等你好久22</li>
+            <li>知否知否，应是等你好久33</li>
+            <li>知否知否，应是等你好久44</li>
+        
+        </ul>
+    </div>
+    <script>
+        //根据类名获取元素
+        let d = document.getElementsByClassName(`d`)
+        console.dir(d);
+        //根据选择器获取元素
+        let li = document.querySelector(`li`)
+        console.dir(li)
+        //根据选择器获取元素
+        let lis = document.querySelectorAll(`li`)
+        for(let i=0; i<lis.length; i++) {
+            console.dir(lis[i])
+        }
+    </script>
+</body>
+</html>

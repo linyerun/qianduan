@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象使用</title>
+</head>
+<body>
+    <!-- 
+
+     -->
+    <script>
+        // let 对象名 = {}
+        let person = {}
+        // 对象有属性和方法组成
+        let p = {
+            /*
+                属性都是成 对出现的，包括属性名和值，它们之间使用英文 : 分隔
+                多个属性之间使用英文 , 分隔
+                属性就是依附在对象上的变量（外面是变量，对象内是属性）
+                属性名可以使用 "" 或 ''，一般情况下省略，除非名称遇到特殊符号如空格、中横线等
+            */
+            name: "随风的叶子",
+            age: "21",
+            getName: function() {
+                return this.name //要加this访问对象内部信息
+            }
+        }
+        //属性的访问
+        console.log(p.age);
+        console.log(p["age"]);
+        //方法调用
+        console.log(p.getName());
+    </script>
+</body>
+</html>

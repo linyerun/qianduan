@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        事件对象:
+            eventTarget.onclick = function(event) {}
+            eventTarget.addEventListener('click', function(event) {})
+
+            事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，
+            这个对象就是事件对象event，它有很多属性和方法
+                在 IE6~8 中，浏览器不会给方法传递参数
+                解决: e = e || window.event;(现在IE浏览器被解决了,所以问题被解决了)
+
+
+            this 是事件绑定的元素， 这个函数的调用者（绑定这个事件的元素）
+            e.target 是事件触发的元素。
+     -->
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script>
+        document.querySelector("ul").addEventListener("click", function (e) {
+            console.dir(this) // ul
+            console.dir(e) // li的冒泡
+            console.dir(e.currentTarget) // this
+            console.dir(e.target) //目标li
+        }, true)
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            /* 盒子 */
+            width: 640px;
+            height: 50px;
+            background-color: #ffc0cb;
+            margin: 50px auto 0; /*版心居中*/
+        }
+        ul {
+            list-style: none;
+        }
+        .box ul li {
+            /* 浮动 */
+            float: left;
+        }
+        .box a {
+            /* 浮动/dispaly */
+            /* 为什么上面的li加了浮动,a缺谢了呢?因为a是行呢哦标签,想加宽高得转 */
+            /* 转：加浮动,inline-block */
+            /* float: left; */
+            /* display: inline-block; */
+            display: block;/*当然,这里加block也是可以的,比较它爸都浮动起来了*/
+
+            /* 盒子 */
+            height: 50px;
+            width: 80px;
+            /* 文字样式 */
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .box a:hover {
+            background-color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        做主导航有一个要求：就是li套a
+
+        尽可能把样式给a,这样用户点击范围大
+            li是块标签,可以被撑大
+     -->
+    <div class="box">
+        <ul>
+            <li><a href="#">新闻1</a></li>
+            <li><a href="#">新闻2</a></li>
+            <li><a href="#">新闻3</a></li>
+            <li><a href="#">新闻4</a></li>
+            <li><a href="#">新闻5</a></li>
+            <li><a href="#">新闻6</a></li>
+            <li><a href="#">新闻7</a></li>
+            <li><a href="#">新闻8</a></li>
+        </ul>
+    </div>
+</body>
+</html>

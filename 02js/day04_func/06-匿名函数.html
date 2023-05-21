@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名函数</title>
+</head>
+<body>
+    <!-- 
+        将匿名函数赋值给一个变量，并且通过变量名称进行调用 
+        我们将这个称为函数表达式
+    
+        调用方式1
+            (function(){})();
+        调用方式2
+            (function(){}());
+        注意:
+            多个立即执行函数要用 ";" 隔开,要不然会报错
+    -->
+    <script>
+        let f = function() {
+            return 1
+        }
+        alert(f())
+    </script>
+</body>
+</html>

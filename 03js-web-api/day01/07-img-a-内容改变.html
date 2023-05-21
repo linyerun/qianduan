@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        src, href, id, alt, title
+     -->
+    <a href="#">
+        <img src="images/tao.png" title="淘宝">
+    </a>
+    <script>
+        let img = document.querySelector("img")
+        img.onclick = function() {
+            img.src = "images/ldh.jpg"
+            img.title = "刘德华"
+            document.querySelector(`a`).href = "##"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置、移除</title>
+</head>
+<body>
+    <div class="nav" index="笑死"></div>
+    <script>
+        let div = document.querySelector("div")
+        // 内置属性设置和更改直接点就行了
+        console.log(div.className);
+        div.setAttribute('class','new-nav')
+        console.log(div.className)
+
+        div.removeAttribute('class')
+        console.log(div.className) //啥没显示
+
+        console.log(div.getAttribute('index'));
+        div.removeAttribute('index')
+        console.log(div.getAttribute('index')) //null
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case02</title>
+</head>
+<body>
+    <script>
+        function getTime(num) {
+            let s = num % 60
+            let m = num / 60 % 60
+            let h = num / 60
+            return addZero(h)+" : "+addZero(m)+" : "+addZero(s)
+        }
+        function addZero(n) {
+            n = parseInt(n) //不加parseInt,整数当浮点数处理,尼玛服了!
+            return n >= 10 ? n : '0' + n
+        }
+        alert(getTime(Number(prompt("请输入秒数"))))
+    </script>
+</body>
+</html>

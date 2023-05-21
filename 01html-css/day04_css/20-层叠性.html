@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠性</title>
+    <style>
+        div {
+            color: red;
+            color: green;
+        }
+        .box {
+            font-size: 30px;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        特性:
+            1. 给同一个标签设置不同的样式 → 此时样式会层叠叠加 → 会共同作用在标签上
+            2. 给同一个标签设置相同的样式 → 此时样式会层叠覆盖 → 最终写在最后的样式会生效
+        注意:
+            当样式冲突时，只有当选择器优先级相同时，才能通过层叠性判断结果
+     -->
+    <div class="box">
+        哈哈哈哈
+        <p>内容....</p>
+        <h1>一级标题</h1>
+    </div>
+</body>
+</html>

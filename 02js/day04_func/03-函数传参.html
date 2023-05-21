@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数传参</title>
+</head>
+<body>
+    <script>
+        // 参数传递案例
+        function getSum(num1,num2) {
+            /*
+                当数值参与||运算时，
+                    结果为true, 会返回第一个为真的值
+                    结果为false,会返回第二个为假的值
+            */
+            num1 = num1 || 0 //0表示false
+            num2 = num2 || 0
+            let sum = num1 + num2
+            document.write(`<h1>结果: ${sum}</h1>`)
+        }
+        getSum(100,200)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交集选择器</title>
+    <style>
+        p.box {
+            color: red;
+        }
+        div.box {
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        语法：选择器1选择器2 { css } //交集选择器：紧挨着
+        
+        作用：选中页面中 同时满足 多个选择器的标签
+        
+        找到页面中 既 能被选择器1选中，又 能被选择器2选中的标签，设置样式
+     -->
+    <!-- 找到第一个p,带box类的, 设置文字颜色是红色 -->
+    <p class="box">这是p标签:box</p>
+    <p>pppppp</p>
+    <div class="box">这是div标签:box</div>
+</body>
+</html>

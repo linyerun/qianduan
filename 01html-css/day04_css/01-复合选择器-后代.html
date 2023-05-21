@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        div p {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        根据 HTML 标签的嵌套关系，选择父元素 后代中 满足条件的元素
+        选择器语法：选择器1 选择器2 { css }
+        后代选择器中，选择器与选择器之前通过 空格 隔开
+        
+        后代都会被影响
+     -->
+    <!-- 后代: 儿子, 孙子, 重孙子..... -->
+    <p>这是一个p标签</p>
+    <div>
+        <p>这是div的儿子p</p>
+        <p>这是div的儿子p</p>
+        <div>
+            <p>这是div的儿子p</p>
+        </div>
+        <h1>
+            <p>这是div的儿子p</p>
+        </h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS优先级</title>
+    <style>
+        body {
+            color: red;
+
+            /* 不能提升继承的优先级 */
+            /* color: red !important; */
+        }
+        * {
+            color: orange !important;
+        }
+        div {
+            color: yellow;
+        }
+        .box {
+            color: green;
+        }
+        #box {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    从低到高:
+        继承 < 通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内样式 < !important
+    
+    !important写在属性值的后面，分号的前面！
+    !important不能提升继承的优先级，只要是继承优先级最低！
+    实际开发中不建议使用 !important
+ -->
+    <div class="box" id="box">哈哈哈</div>
+</body>
+</html>

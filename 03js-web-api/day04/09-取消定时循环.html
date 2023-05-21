@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        clearInterval()方法取消了先前通过调用 setInterval()建立的定时器。
+     -->
+    <ul></ul>
+    <script>
+        let ul = document.querySelector("ul")
+        let id = setInterval(function () {
+            let li = document.createElement("li")
+            li.innerHTML = "lyr"
+            ul.appendChild(li)
+        }, 2000)
+        setTimeout(function() {
+            clearInterval(id) //取消之前的循环
+            alert("取消循环")
+        },6000)
+    </script>
+</body>
+</html>

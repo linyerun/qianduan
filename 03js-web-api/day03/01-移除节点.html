@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移除节点</title>
+    <style>
+        span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        node.removeChild(child)
+            从 DOM 中删除一个子节点，返回删除的节点。
+     -->
+    <div>
+        <span>111</span>
+        <span>222</span>
+    </div>
+    <script>
+        let d = document.querySelector("div")
+        let e = d.removeChild(d.children[0])
+        console.dir(e)
+    </script>
+</body>
+</html>

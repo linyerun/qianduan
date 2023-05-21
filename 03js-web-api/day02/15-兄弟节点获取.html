@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取兄弟节点</title>
+</head>
+<body>
+    <!-- 
+        节点:
+            node.nextSibling
+                没有返回null
+            node.previousSibling
+                同上
+        元素:   => 存在兼容性问题
+            node.nextElementSibling
+                没有返回null
+            node.previousElementSibling
+                同上
+     -->
+    <div>111</div>
+    <div>222</div>
+    <div>333</div>
+    <script>
+        let d2 = document.body.children[1]
+        console.dir(d2.previousSibling)
+        console.dir(d2.nextSibling)
+
+        console.dir(d2.previousElementSibling)
+        console.dir(d2.nextElementSibling)
+
+        // 如何解决兼容性问题? 自己封装一个
+        function getNextElementSibling(element) {
+            var el = element;
+            while (el = el.nextSibling) {
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

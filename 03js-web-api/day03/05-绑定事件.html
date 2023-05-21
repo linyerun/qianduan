@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+     -->
+    <div>点击</div></div>
+    <script>
+        document.querySelector("div").addEventListener('click',function() {
+            alert("111")
+        })
+        document.querySelector("div").addEventListener('click', function () {
+            alert("222")
+        })
+        addEventListener(document.querySelector("div"),"click",function() {
+            alert("333")
+        })
+        // window对象的attachEvent方法只在IE浏览器中有效，其它浏览器不支持这个方法，所以报错。
+        // document.querySelector("div").attachEvent('onclick', function () {
+        //     alert("111")
+        // })
+
+        function addEventListener(element, eventName, fn) {
+            // 判断当前浏览器是否支持 addEventListener 方法
+            if (element.addEventListener) {
+                element.addEventListener(eventName, fn); // 第三个参数 默认是false
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, fn);
+            } else {
+                // 相当于 element.onclick = fn;
+                element['on' + eventName] = fn;
+            }
+        }
+    </script>
+</body>
+</html>

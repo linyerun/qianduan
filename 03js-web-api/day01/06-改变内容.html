@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- 
+        innerText VS innerHTML
+            不同点:
+                innerText起始位置到终止位置的内容,但它去除 html 标签,同时空格和换行也会去掉
+                innerHTML起始位置到终止位置的全部内容,包括 html 标签,同时保留空格和换行
+     -->
+    <div></div>
+    <p>
+        我是文字
+        <span>123</span>
+    </p>
+    <script>
+        function getDate() {
+            let date = new Date()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let dates = date.getDate()
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = date.getDay();
+            return '今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day];
+        }
+
+        //修改内容
+        let div = document.querySelector(`div`)
+        // div.innerText = `<strong>${getDate()}</strong>`
+        div.innerHTML = `<strong>${getDate()}</strong>`
+        // 获取元素内容
+        let p = document.querySelector(`p`)
+        console.log(p.innerText);
+        console.log(p.innerHTML);
+    </script>
+</body>
+</html>

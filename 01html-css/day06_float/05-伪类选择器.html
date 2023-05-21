@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        li:nth-child(2n) {
+            background-color: red;
+        }
+        li:nth-child(2n+1) {
+            background-color: orange;
+        }
+        /* 你的倍数是：4n */
+    </style>
+</head>
+<body>
+    <!-- 
+        :nth-child → 直接在所有孩子中数个数
+
+        :nth-of-type → 先通过该 类型 找到符合的一堆子元素，然后在这一堆子元素中数个数
+     -->
+    <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul>
+</body>
+</html>

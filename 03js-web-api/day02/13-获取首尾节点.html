@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>111</span>
+        <span>222</span>
+        <span>333</span>
+    </div>
+    <!-- 
+        子节点 包括 子元素
+            子元素,比如span标签就是div的一个子元素
+     -->
+    <script>
+        // 不是标准写法(只读)
+        let div = document.querySelector("div")
+        let cs = div.children
+
+        // 方法一(推荐)
+        console.dir(cs[0])
+        console.dir(cs[cs.length-1])
+
+        // 方法二 (子节点) => 操作不方便
+        console.dir(div.firstChild)
+        console.dir(div.lastChild)
+
+        // 方法三 (获取子元素) => 存在兼容性问题
+        console.dir(div.firstElementChild)
+        console.dir(div.lastElementChild)
+    </script>
+</body>
+</html>

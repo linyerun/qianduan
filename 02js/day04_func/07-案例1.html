@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case01</title>
+</head>
+<body>
+    <button class="bt" style="cursor: pointer;">点击</button>
+    <script>
+        let myButton = document.querySelector(".bt")
+        // 方式1
+        // myButton.addEventListener('click',function() {
+        //     alert("弹出1")
+        // })
+
+        // 方式2
+        myButton.onclick = function() {
+            alert('弹出2')
+        }
+    </script>
+</body>
+</html>

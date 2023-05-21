@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合并现象</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        .d1 {
+            
+            margin-bottom: 50px;
+        }
+        .d2 {
+            margin-top: 50px; /*加了没变化*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        垂直布局 的 块级元素，上下的margin会合并
+        结果：最终两者距离为margin的最大值
+        解决：只给其中一个盒子设置margin即可
+     -->
+     <div class="d1">111</div>
+     <div class="d2">222</div>
+</body>
+</html>

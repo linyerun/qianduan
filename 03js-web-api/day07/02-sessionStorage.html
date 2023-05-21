@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sessionStorage</title>
+</head>
+<body>
+    <!-- 
+        window.sessionStorage(存储大小约5M)
+            1、生命周期为关闭浏览器窗口
+            2、在同一个窗口(页面)下数据可以共享
+            3. 以键值对的形式存储使用
+            sessionStorage.setItem(key, value) 存储数据
+            sessionStorage.getItem(key)        获取数据
+            sessionStorage.removeItem(key)     移除数据
+            sessionStorage.clear()             删除所有数据
+     -->
+    <script>
+        // 设置数据(添加or更新)
+        sessionStorage.setItem('name1','随风的叶子1')
+        sessionStorage.setItem('name2','随风的叶子2')
+        sessionStorage.setItem('name3','随风的叶子3')
+        // 获取数据
+        sessionStorage.getItem('name1')
+        // 移除数据
+        sessionStorage.removeItem('name1')
+        // 移除全部数据
+        sessionStorage.clear()
+        // localStorage.clear()
+    </script>
+</body>
+</html>

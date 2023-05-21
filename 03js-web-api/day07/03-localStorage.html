@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <a href="./01-存储介绍.html" target="_blank">点击</a>
+    <a href="http://www.baidu.com" target="_blank">点击</a>
+    <!-- 
+        window.localStorage
+            1、声明周期永久生效，除非手动删除 否则关闭页面也会存在
+            2、可以多窗口（页面）共享（同一浏览器可以共享)
+            3. 以键值对的形式存储使用
+            localStorage.setItem(key, value) 存储数据
+            localStorage.getItem(key)        获取数据
+            localStorage.removeItem(key)     移除数据
+            localStorage.clear()             删除所有数据
+        
+        这个localStorage的数据在多个自己的页面共享
+            比如你在掘金的页面获取这个页面的name1是获取不了的。
+        
+        具体细节以后自己去摸索
+     -->
+    <script>
+        // 设置-更新
+        localStorage.setItem('name1','随风1号')
+        localStorage.setItem('name2','随风2号')
+        localStorage.setItem('name3','随风3号')
+        localStorage.setItem('name4','随风4号')
+
+        // 获取
+        console.log(localStorage.getItem('name1'))
+
+        // // 移除数据
+        // localStorage.removeItem('name1')
+        // // 删除全部数据
+        // localStorage.clear()
+
+    </script>
+</body>
+</html>

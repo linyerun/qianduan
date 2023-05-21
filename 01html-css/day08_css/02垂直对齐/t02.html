@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 
+            疑惑: 为什么图片设置了这个属性之后可以影响到input输入框呢?
+            
+            猜想: 给这个行内块元素设置了这个基线位置之后,后面跟着的行内元素
+                  或者行内块元素也跟着这样元素基线一样
+            实验: 和我猜想的一样.但是多个input好像这个有没法继承下去了,以后看着调吧
+        */
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../01images/1.jpg" alt="">
+    <span>哈哈哈</span>
+    <input type="text">
+    <img src="../01images/1.jpg" alt="">
+</body>
+
+</html>

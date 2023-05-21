@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM对象</title>
+</head>
+<body>
+    <!-- 
+        bom的顶级对象: window
+
+        window 对象是浏览器的顶级对象，它具有双重角色。
+            1. 它是 JS 访问浏览器窗口的一个接口。
+            2. 它是一个全局对象。定义在全局作用域中的变量、函数都会变成 window 对象的属性和方法。
+            3. 在调用的时候可以省略 window，前面学习的对话框都属于 window 对象方法，如 alert()、prompt() 等
+     -->
+    <script>
+        var num = 100   //let的window获取不了
+        console.log(window.num) //获取的是全局的
+        function fn() {
+            alert(window.num)
+        }
+        var f = function() {    //使用let获取报错
+            alert('全局f')
+        }
+        window.fn()
+        window.f()
+    </script>
+</body>
+</html>

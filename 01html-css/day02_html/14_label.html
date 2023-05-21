@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+</head>
+<body>
+    <!-- 
+        label标签:
+            作用：之前点击选框才能选中的，使用label之后点击文字就行了。
+            使用方法：
+                1、将input带着的文字用label括起来，input的id值和label的for的值一致
+                2、直接使用label包裹住input
+     -->
+    <input type="radio" id="male" name="sex"><label for="male">男</label>
+    <input type="radio" id="female" name="sex"><label for="female">女</label>
+    <br>
+    <label>
+        <input type="radio" name="sex">男
+    </label>
+    <label>
+        <input type="radio" name="sex">女
+    </label>
+    <!-- 
+        ps: checkbox一样可以使用这个功能
+     -->
+</body>
+</html>

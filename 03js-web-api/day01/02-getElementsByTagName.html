@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+    
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    
+    </ol>
+    <script>
+        // 父元素必须是单个对象(必须指明是哪一个元素对象). 获取的时候不包括父元素自己。
+        let lis = document.getElementsByTagName(`li`)
+        console.log(lis.length);
+        for(let i=0; i<lis.length; i++) {
+            console.dir(lis[i])
+        }
+        let ol = document.getElementById(`ol`)
+        console.log(ol.getElementsByTagName(`li`).length);
+        lis = ol.getElementsByTagName(`li`)
+        for (let i = 0; i < lis.length; i++) {
+            console.dir(lis[i])
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        eventTarget.removeEventListener(type, listener[, useCapture]);
+        eventTarget.detachEvent(eventNameWithOn, callback);
+     -->
+    <div>点击</div>
+    <script>
+        // 删除操作要注意保存这个匿名函数的地址
+        let d = document.querySelector("div")
+        let fn = function () {
+            alert("111")
+        }
+        // d.onclick = function() {
+        //     alert("哈哈哈")
+        // }
+        d.onclick = fn //这种形式注册进来的不会被删除
+        d.addEventListener("click",fn)
+        removeEventListener(d,'click', fn)
+
+        function removeEventListener(element, eventName, fn) {
+            // 判断当前浏览器是否支持 removeEventListener 方法
+            if (element.removeEventListener) {
+                element.removeEventListener(eventName, fn); // 第三个参数 默认是false
+            } else if (element.detachEvent) {
+                element.detachEvent('on' + eventName, fn);
+            } else {
+                element['on' + eventName] = null;
+            }
+        }
+    </script>
+</body>
+</html>

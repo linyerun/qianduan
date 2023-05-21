@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承性</title>
+    <style>
+        div {
+            color: red;
+            font-size: xx-large;
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            font-family: 微软雅黑;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        记住: 
+            控制字的都能继承，不是控制字的都不能继承。
+            我有的我就不继承，我没有的就继承我老爹的。
+        
+        注意:
+            a因为有自己的颜色，所以不继承父亲的color
+            h1-h6有自己的大小，所以不继承父亲的font-size
+        
+        应用:
+            可以直接给ul设置 list-style:none 属性，从而去除列表默认的小圆点样式
+            直接给body标签设置统一的font-size，从而统一不同浏览器默认文字大小
+     -->
+    <div>
+        <span>哈哈哈</span>
+        <h1>一级标题</h1>
+        <h6>六级标题</h6>
+        <a href="#">超链接</a>
+    </div>
+    <ul>
+        <li>哈哈</li>
+        <li>哈哈</li>
+        <li>哈哈</li>
+    </ul>
+</body>
+</html>

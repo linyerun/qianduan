@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框区域</title>
+    <style>
+        div {
+            background-color: orange;
+            border-width: 5px;
+            border-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .d1 {
+            border-style: solid;
+        }
+        .d2 {
+            border-style: dashed;
+        }
+        .d3 {
+            border-style: dotted;
+        }
+        .d4 {
+            border: 5px solid pink;
+            /* border-bottom: 5px solid pink; */
+            /* border-top: 5px solid pink; */
+            /* border-right: 5px solid pink; */
+            /* border-left: 5px solid pink; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        border: 
+            边框粗细:   border-width: 数字+px
+            边框样式:   border-style: 实线(solid), 虚线(dashed), 点线(dotted)
+            边框颜色:   border-color: 颜色取值
+
+        工作中常用:
+            连写妙招:   border 宽度 样式 颜色
+            left, right, top, bottom
+     -->
+     <div class="d1"></div>
+     <div class="d2"></div>
+     <div class="d3"></div>
+     <div class="d4"></div>
+</body>
+</html>

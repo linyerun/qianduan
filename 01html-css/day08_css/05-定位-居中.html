@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            /* margin-top: -150px; */
+            /* margin-left: -150px; */
+
+            /* 替代代码(这个很牛) */
+            transform: translate(-50%,-50%);
+
+            height: 500px;
+            width: 600px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        使用了绝对定位之后, 就不能"margin: 0 auto;"
+     -->
+    <div class="box"></div>
+</body>
+</html>

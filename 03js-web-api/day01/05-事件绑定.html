@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- 
+        鼠标事件
+            onclick             鼠标点击左键触发
+            onmouseover         鼠标经过触发
+            onmouseout          鼠标离开触发
+            onfocus             获取鼠标焦点触发
+            onblur              逝去鼠标焦点触发
+            onmouseup           鼠标弹起触发
+            onmousemove         鼠标移动触发
+            onmousedown         鼠标按下触发
+     -->
+    <button class="btn" style="background-color: aqua;">点击</button>
+    <script>
+        // 获取元素
+        let btn = document.getElementsByClassName(`btn`)
+        // 绑定事件
+        btn[0].onclick = function() {
+            alert(`弹出窗口`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数使用</title>
+</head>
+<body>
+    <!-- 
+        函数名命名规范:
+            1.和变量命名基本一致
+            2.尽量小驼峰式命名法
+            3.前缀应该为动词
+                can: 判断是否可执行某个动作
+                has: 判断是否含义某种含义
+                is: 判断是否为某个值
+                get: 获取某个值
+                set: 设置某个值
+                load: 加载某些数据
+            4.命名建议:
+                常用动词约定
+     -->
+    <script>
+        // 函数声明
+        function sayHello() {
+            document.write(`<h1>Hello,World</h1>`)
+        }
+        function print99() {
+            for (let i = 1; i <= 9; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.writeln(`${j}*${i}=${j * i}`)
+                    document.writeln(`&nbsp;&nbsp;`)
+                }
+                document.write(`<br>`)
+            }
+        }
+
+        // case1
+        sayHello()
+
+        // case2
+        for (let i = 0; i < 3; i++) {
+            print99()
+            document.write(`<br>`)
+        }
+    </script>
+</body>
+</html>

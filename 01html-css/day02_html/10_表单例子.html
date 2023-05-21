@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单例子</title>
+</head>
+<body>
+    <!-- 
+        name: value //将这一个kv对传到后端,value是用户输入的东西
+        开始给value值，算是默认值了
+     -->
+    <!-- 昵称：<input type="text" value="suifeng" name="nickname"> -->
+    昵称: <input type="text" name="nickname">
+    <br>
+    密码: <input type="password" name="password">
+    <br>
+    <!-- checked 表示默认选择的值 它们的name都应该是sex-->
+    性别: <input type="radio" name="sex">男
+          <input type="radio" name="sex" checked>女
+    <br>
+    爱好: <input type="checkbox" name="hobbies" checked>敲代码
+          <input type="checkbox" name="hobbies" checked>掉头发
+          <input type="checkbox" name="hobbies">打篮球
+    <br>
+    <!-- multiple运行上传多个文件 -->
+    <input type="file" multiple>
+     <br>
+     <br>
+     <!-- 
+         按钮：要配合form标签一起使用，form标签包裹它们就行了
+      -->
+      <input type="submit">
+      <input type="reset">
+      <input type="button" value="普通按钮">
+</body>
+</html>
