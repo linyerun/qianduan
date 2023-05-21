@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+
+<body>
+    <!-- 
+        当列表的数据变化时，默认情况下，vue 会尽可能的复用已存在的 DOM 元素，从而提升渲染的性能。但这种
+        默认的性能优化策略，会导致有状态的列表无法被正确更新。
+        为了给 vue 一个提示，以便它能跟踪每个节点的身份，从而在保证有状态的列表被正确更新的前提下，提升渲
+        染的性能。此时，需要为每项提供一个唯一的 key 属性：
+     -->
+    <div id="app">
+        <ul>
+            <li v-for="item in list">name: {{item.name}}</li>
+        </ul>
+        <ul>
+            <li v-for="(item,idx) in list" :key="item.id">index: {{idx}},name: {{item.name}}</li>
+        </ul>
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                list: [
+                    {id: 1,name: '随风'},
+                    {id: 2,name: '磐石'},
+                    {id: 3,name: 'Ernie'},
+                ]
+            },
+            method: {
+
+            },
+        })
+    </script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on</title>
+</head>
+
+<body>
+    <div class="app">
+        <h3>count值为: {{count}}</h3>
+        <button @click="addNewCount(2,$event)">点击</button>
+        <input type="text" @keyup.enter="submit">
+        <input type="text" @keyup.esc="submit">
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                count: 0,
+            },
+            methods: {
+                addNewCount(step,e) {
+                    // e.target获取到这个标签元素
+                    const nowBgColor = e.target.style.backgroundColor
+                    e.target.style.backgroundColor = nowBgColor === 'cyan'? '': 'cyan'
+                    this.count += step
+                },
+                submit() {
+                    alert('提交')
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

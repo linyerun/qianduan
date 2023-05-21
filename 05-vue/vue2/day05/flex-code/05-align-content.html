@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>align-content</title>
+	<style>
+		.box {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			/*align-content: flex-start;*/
+			/*align-content: flex-end;*/
+			/*align-content: center;*/
+			/*align-content: space-around;*/
+			align-content: space-between;
+			align-content: stretch;/*默认值*/
+
+			width: 700px;
+			height: 500px;
+			background-color: orange;
+		}
+		.box span {
+			width: 200px;
+			height: 20px;
+			margin: 10px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+</body>
+</html>

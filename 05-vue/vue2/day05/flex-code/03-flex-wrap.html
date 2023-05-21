@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-wrap</title>
+	<style>
+		.box {
+			display: flex;
+			flex-direction: row; /*默认值*/
+			justify-content: space-between;
+			background-color: orange;
+			height: 200px;
+			/*flex-wrap: nowrap;!*这是默认的，塞不下去了也不换行，而是把元素变小*!*/
+			flex-wrap: wrap;
+		}
+
+		.box span {
+			width: 1000px;
+			background-color: blue;
+			margin: 10px 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<span>1</span>
+	<span>2</span>
+	<span>3</span>
+	<span>4</span>
+</div>
+</body>
+</html>

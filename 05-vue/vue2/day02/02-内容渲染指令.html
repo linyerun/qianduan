@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容渲染指令</title>
+</head>
+<body>
+    <div class="app">
+        <p v-text="name01"></p>
+        <div v-html="name02"></div>
+        {{name03}}
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                name01: "哈哈哈",
+                name02: "<h1>哈哈哈</h1>",
+                name03: "哈哈哈"
+            }
+        })
+    </script>
+</body>
+</html>

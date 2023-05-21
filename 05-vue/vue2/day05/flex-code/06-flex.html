@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<style>
+		.box {
+			display: flex;
+
+			background-color: orange;
+			height: 150px;
+		}
+		.box div:nth-child(1),div:nth-child(3) {
+			height: 150px;
+			width: 100px;
+			background-color: green;
+		}
+		.box div:nth-child(2) {
+			flex: 1;
+			height: 150px;
+			background-color: red;
+		}
+		.container {
+			display: flex;
+			margin-top: 100px;
+			height: 150px;
+		}
+		.container span {
+			flex: 1;
+		}
+		.container span:nth-child(1),span:nth-child(3) {
+			background-color: green;
+		}
+		.container span:nth-child(2) {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+<hr>
+<p class="container">
+	<span></span>
+	<span></span>
+	<span></span>
+</p>
+</body>
+</html>

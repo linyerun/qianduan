@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容渲染指令</title>
+</head>
+
+<body>
+    <div class="app">
+        <img v-bind:src="imgURL">
+        <img :src="imgURL">
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                imgURL: 'https://p3-passport.byteimg.com/img/user-avatar/1282a1dc01cc9bbf7217117434d02662~64x64.awebp'
+            }
+        })
+    </script>
+</body>
+
+</html>

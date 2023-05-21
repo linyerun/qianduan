@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on</title>
+</head>
+
+<body>
+    <div class="app">
+        <input type="text" v-model="username">
+        <input v-model.number="age" />
+        <input v-model.trim="msg" />
+        <!-- 输入完,失去焦点才变化 -->
+        <input v-model.lazy="msg" />
+        <select v-model:numver="province">
+            <option value="-1">请选择</option>
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <option value="4">深圳</option>
+        </select>
+        <p>{{username}}</p>
+        <p>{{age}}</p>
+        <p>{{msg}}</p>
+        <p v-text="province"></p>
+    </div>
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                username: '',
+                age: 0,
+                msg: '',
+                province: -1,
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>
